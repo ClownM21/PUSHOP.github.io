@@ -1,0 +1,279 @@
+:root{
+    --primary: #313131;
+    --bg: #76d7c4;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'poppins', sans-serif;
+    background-color: rgb(14, 51, 44);
+    color: aliceblue;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgb(49, 49, 49, 0.9);
+    border-bottom: 1px solid var(--primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    
+}
+
+.navbar .navbar-img{
+    position: fixed;
+    justify-content: left;
+    margin-top: 1rem;
+
+}
+.navbar .navbar-logo{
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    margin-left: 9rem;
+}
+
+.navbar .navbar-nav a{
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-size: 1.4rem;
+    margin: 0 2rem;
+}
+
+.navbar .navbar-nav a:hover{
+    color: #76d7c4;
+}
+
+.navbar .navbar-nav a::after{
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--bg);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+    color:#fff;
+    margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+    color:var(--bg);
+}
+
+#humberger-menu{
+    display: none;
+
+}
+
+.hero{
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    background-image: url('4.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 10% 10%;
+    position: relative;
+}
+
+.kata a{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #ffeaa7;
+}
+
+.ee{
+    margin-top: 5rem;
+    width: 5rem;
+    height: 5rem;
+}
+
+.ee :hover{
+    color: #76d7c4;
+}
+
+.kata{
+    margin: 7rem 7rem 5rem 7rem;
+}
+
+.kata p{
+    font-size: 2rem;
+    font-weight: 400;
+    color: #ffeaa7;
+    margin-top: 2rem;
+    text-align: justify;
+
+}
+
+.kata h3{
+    font-size: 4rem;
+    font-weight: 600;
+    color: #ffeaa7;
+    margin-bottom: 1rem;
+}
+
+.hero::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg,rgb(14, 51, 44) 3%, rgba(255,255,255,0)25%);
+}
+
+.hero .content{
+    padding: 1.4rem 7%;
+    max-width: 60rem;
+}
+
+.hero .content h3{
+    font-size: 10em;
+    color: #ffeaa7;
+    text-shadow: 1px 1px 3px rgb(118, 215, 196, 0.5);
+    line-height: 1.2;
+}
+
+.Auten {
+    padding: 2rem 7% 1.4rem;
+}
+
+.Auten h2 {
+    align-items: first baseline;
+    color: #ffeaa7;
+    font-size: 6rem;
+    margin-bottom: 3rem 3rem 2rem;
+}
+
+.Auten p{
+    font-size: 2rem;
+    font-weight: 300;
+    color: #ffeaa7;
+    margin-bottom: 10rem;
+}
+
+.Auten .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 300;
+    color: #313131;
+    box-sizing: border-box;
+    background-color: #ffeaa7;
+}
+
+
+.gambar {
+    margin-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: 1600px;
+    text-align: center;
+    font-size: 3rem;
+}
+
+
+.gambar :hover{
+    color: #ffeaa7;
+}
+
+footer{
+    background-color: #76d7c4;
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
+    margin-top: 3rem;
+}
+
+footer .credit {
+    color: #313131;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+footer .credit a {
+    color: #313131;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/*laptop*/
+@media (max-width: 1366px) {
+    html{ 
+        font-size: 75%;
+    }
+}
+
+/* tablet*/
+@media (max-width: 758px) {
+    html{ 
+        font-size: 62.5%;
+    }
+
+    #humberger-menu{
+        Display : inline-block;
+    }
+
+    .navbar .navbar-nav {
+        Position : absolute;
+        Top : 100%;
+        Right:-100%;
+        Background-color: #313131;
+        Width : 30rem;
+        Height : 100vh;
+        Transition: 0.3s;
+    }
+
+    .navbar .navbar-nav.active {
+       right: 0;
+    }
+    
+    .navbar .navbar-nav a{
+        Color :#76d7c4;
+        Display : block; 
+        Margin: 1.5rem;
+        Padding: 0.5rem;
+        Font-size: 2rem;
+        }
+        
+        .navbar .navbar-nav a::after {
+        transform-origin: 0 0;
+        }
+        
+        .navbar .navbar-nav a:Hover::after {
+        transform:scaleX(0.2);
+        }
+            
+}
+
+/* mobile phone*/
+
+@media (max-width: 450px) {
+    html{ 
+        font-size: 55%;
+    }
+}
